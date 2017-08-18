@@ -1,0 +1,7 @@
+fcm.settings_form:
+  path: '/admin/fcm'
+  defaults:
+    _title: 'Firebase Cloud Messaging integration'
+    _form: '\Drupal\fcm\Form\SettingsForm'
+  requirements:
+    _permission: 'administer fcm settings'

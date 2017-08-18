@@ -1,0 +1,10 @@
+fcm.library:
+  version: 1.x
+  js:
+    js/main-fcm.js: {}
+    https://www.gstatic.com/firebasejs/4.2.0/firebase.js: { type: external }
+    https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js: { type: external }
+    https://www.gstatic.com/firebasejs/4.2.0/firebase-messaging.js: { type: external }
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

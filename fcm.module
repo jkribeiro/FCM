@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Module file for FCM module.
+ */
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function fcm_page_attachments_alter(&$page) {
+  $config = \Drupal::service('config.factory')->get('fcm.settings');
+  $settings = [
+    'apiKey' => $config->get('api_key'),
+    'projectId' => $config->get('project_id'),
+    'authDomain' => $config->get('auth_domain'),
+    'databaseUrl' => $config->get('database_url'),
+    'storageBucket' => $config->get('storage_bucket'),
+    'messagingSenderId' => $config->get('messaging_sender_id'),
+  ];
+
+  $page['#attached']['library'][] = 'fcm/fcm.library';
+  $page['#attached']['drupalSettings']['fcm']['settings'] = $settings;
+}

@@ -1,0 +1,4 @@
+administer fcm settings:
+  title: 'Administer fcm settings'
+  description: 'Administer FCM settings'
+  restrict access: false

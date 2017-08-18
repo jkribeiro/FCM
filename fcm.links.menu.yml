@@ -1,0 +1,5 @@
+fcm.admin:
+  title: Firebase Cloud Messaging
+  description: 'Firebase Cloud Messaging integration settings.'
+  parent: system.admin_config_services
+  route_name: fcm.settings_form
