@@ -1,0 +1,8 @@
+services:
+  fcm.message:
+    class: Drupal\fcm\FcmMessage
+    arguments:
+      - '@config.factory'
+      - '@http_client_factory'
+      - '@current_user'
+      - '@logger.factory'

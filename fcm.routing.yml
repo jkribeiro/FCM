@@ -5,3 +5,15 @@ fcm.settings_form:
     _form: '\Drupal\fcm\Form\SettingsForm'
   requirements:
     _permission: 'administer fcm settings'
+
+fcm.register_token:
+  path: '/fcm/register'
+  defaults:
+    _controller: '\Drupal\fcm\Controller\FcmController::registerToken'
+  requirements:
+    _user_is_logged_in: 'TRUE'
+    _permission: 'register fcm token'
+    _method: 'POST'
+    _custom_access: '\Drupal\fcm\Controller\FcmController::validateTokenRegisterRequest'
+  options:
+    no_cache: TRUE

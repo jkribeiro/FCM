@@ -2,3 +2,8 @@ administer fcm settings:
   title: 'Administer fcm settings'
   description: 'Administer FCM settings'
   restrict access: false
+
+register fcm token:
+  title: 'Register FCM token'
+  description: 'Allows the user to register their FCM token'
+  restrict access: false
